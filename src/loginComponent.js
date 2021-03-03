@@ -20,10 +20,8 @@ const LoginComponent = (props) => {
         setMessage(newMessage)
     }
 
-    const style = {
-        padding: '20px'
-    }
-    return (<div style={style}>
+
+    return (<div>
         <input type='text' onChange={(e) => { setUserName(e.target.value) }} placeholder='username' />
         <input type='password' onChange={(e) => { setPassword(e.target.value) }} placeholder='password' />
         <button onClick={login}>login</button>

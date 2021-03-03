@@ -1,3 +1,4 @@
+import { Row, Col } from 'arwes';
 import React, { useEffect, useState } from 'react';
 
 const CoolDataComponent = () => {
@@ -17,8 +18,15 @@ const CoolDataComponent = () => {
     }, []);
 
 
-    return (<div>HI, you got {myData.length} data
-        { myData.map(data => <div className="movie-card">name: {data.Name},  Year: {data.MovieYear}</div>)}</div>);
+    return (<div>
+        <Row>HI, you got {myData.length} data</Row>
+        { myData.map(data =>
+            <Row>
+                <Col s={6}>{data.Name} </Col>
+                <Col s={6}>({data.MovieYear})</Col>
+            </Row>
+        )}
+    </div >);
 }
 
 export default CoolDataComponent;
